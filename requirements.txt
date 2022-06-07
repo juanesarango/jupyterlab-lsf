@@ -1,0 +1,6 @@
+black                      22.3.0
+click                      8.0.4
+jupyterlab                 3.2.9
+jupyterlab-code-formatter  0.3.0
+jupyterlab-server          2.10.3
+jupyterlab-widgets         1.1.0
