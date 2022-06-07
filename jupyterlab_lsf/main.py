@@ -39,7 +39,7 @@ import click
     show_default=True,
 )
 def submit_notebook_to_lsf(port, walltime, nodes, memory, watch, htslib_path):
-    """Submits jupyter server in an lsf host and map its port."""
+    """Submit jupyter server in an lsf host and map its port."""
     if not shutil.which("jupyter"):
         raise Exception("`jupyter` command not found. Please install")
     user = os.getenv("USER", "papaemmelab-user")
@@ -74,7 +74,7 @@ def submit_notebook_to_lsf(port, walltime, nodes, memory, watch, htslib_path):
     ]
     jobid = subprocess.check_output(lsf_cmd).decode("utf-8")
     jobid = re.findall("<(.*?)>", jobid)[0]
-    click.echo(f"🚀 Submitted on job {jobid}")
+    click.secho(f"🚀 Submitted on job {jobid}", fg="green")
 
     job_check_cmd = ["bjobs", "-json", jobid]
     job_status = "PEND"

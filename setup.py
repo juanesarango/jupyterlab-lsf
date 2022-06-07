@@ -10,7 +10,7 @@ from setuptools import setup
 ROOT = abspath(dirname(__file__))
 
 # See 4 > https://packaging.python.org/guides/single-sourcing-package-version/
-with open(join(ROOT, "jupyterlab-lsf", "VERSION"), "r") as f:
+with open(join(ROOT, "jupyterlab_lsf", "VERSION"), "r") as f:
     VERSION = f.read().strip()
 
 setup(
