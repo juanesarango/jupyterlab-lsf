@@ -7,6 +7,14 @@ pip install @papaemmelab/jupyterlab-lsf
 ```
 
 ### Usage:
+
+Choose an unique port for your user:
+```bash
+jupyterlab-lsf --port 2345
+```
+
+### More:
+
 ```bash
 $ jupyterlab-lsf --help
 
@@ -29,7 +37,7 @@ Options:
 To map you localhost port with your server (where LSF runs):
 ```bash
 ssh -X -N -f -L localhost:$PORT:localhost:$PORT $SERVER
-``` 
+```
 
 To clear the port:
 ```bash
@@ -46,7 +54,7 @@ forward () {
  ssh -X -N -f -L localhost:"$1":localhost:"$1" "$2"
 }
 
-# Examples: 
+# Examples:
 # forward 8888 juno
 # clearport 8888
 
